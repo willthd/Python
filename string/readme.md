@@ -96,4 +96,6 @@ I ate 10 apples. so I was sick for three days.
 
 
 
-참조 : https://wikidocs.net/13 (점프 투 파이썬)
+참고 자료
+
+https://wikidocs.net/13 (점프 투 파이썬)

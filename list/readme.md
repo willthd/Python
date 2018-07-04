@@ -149,3 +149,9 @@
   a.remove(x) - x는 a리스트의 요소값
   a.pop(x) - x는 a리스트의 인덱스(del과의 차이점은 return값이 있다는 것)
   del a[x] - x는 a리스트의 인덱스
+
+
+
+참고 자료
+
+https://wikidocs.net/14 (점프 투 파이썬)
