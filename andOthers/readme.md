@@ -672,3 +672,56 @@ a |= b
 # {1, 2, 3, 4, 5, 6, 7}
 ```
 
+</br>
+
+* heap
+
+https://www.daleseo.com/python-heapq/
+
+`heapq` 모듈에은 파이썬의 보통 리스트를 마치 최소 힙처럼 다룰 수 있도록 도와준다.
+자바의 `PriorityQueue` 클래스처럼 리스트와 별개의 자료구조가 아닌 점에 유의해야 한다. 그렇게 때문에, 그냥 빈 리스트를 생성해놓은 다음 `heapq` 모듈의 함수를 호출할 때 마다 이 리스트를 인자로 넘긴다. 다시말해, 파이썬에서는 `heapq` 모듈을 통해서 원소를 추가하거나 삭제한 **리스트**가 그냥 최소 힙이다.
+
+```python
+# 최소힙
+import heapq
+
+# 힙 생성
+heap = []
+
+# 원소 추가. O(logN)
+heapq.heappush(heap, 4)
+heapq.heappush(heap, 1)
+heapq.heappush(heap, 7)
+heapq.heappush(heap, 3)
+print(heap)
+# [1, 3, 7, 4]
+
+# 원소 삭제. O(logN)
+print(heapq.heappop(heap))
+print(heap)
+# 1
+# [3, 4, 7]
+
+# 삭제 안하고 값 얻기
+print(heap[0])
+
+# 기존 리스트 힙으로 변환
+heap = [4, 1, 7, 3, 8, 5]
+heapq.heapify(heap)
+print(heap)
+# [1, 3, 5, 4, 8, 7]
+
+# 최대힙
+import heapq
+
+nums = [4, 1, 7, 3, 8, 5]
+heap = []
+
+for num in nums:
+  heapq.heappush(heap, (-num, num)) # (우선 순위, 값)
+  
+# 힙에서 값을 읽어올 때는 각 튜플에서 인덱스 1에 있는 값을 취하면 된다.
+print(heap)
+# [(-8, 8), (-7, 7), (-5, 5), (-1, 1), (-3, 3), (-4, 4)]
+```
+
