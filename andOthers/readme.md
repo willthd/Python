@@ -350,6 +350,9 @@
   Hash Table이랑 동일 개념
 
   ```python
+  # 생성
+  dict_ = dict()
+  
   # 1. Tuple List로부터 dict 생성
   # key가 이름, val이 나이
   persons = [('김기수', 30), ('홍대길', 35), ('강찬수', 25)]
@@ -391,14 +394,14 @@
   # value 기준으로 key를 정리하고 싶으면
   sorted(fruits, key=lambda x:fruits[x], reverse=True)
   # 결과 : ['apple', 'pear', 'banana', 'plum', 'melon']
-  
+
   # 8. +a
-  keys = scores.keys()
-vals = scores.values()
-  ```
-
+keys = scores.keys()
+  vals = scores.values()
+```
+  
   참고
-
+  
   [http://pythonstudy.xyz/python/article/14-%EC%BB%AC%EB%A0%89%EC%85%98--Dictionary](http://pythonstudy.xyz/python/article/14-컬렉션--Dictionary)
   
   http://blog.naver.com/PostView.nhn?blogId=msyang59&logNo=220627524714
