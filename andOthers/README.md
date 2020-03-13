@@ -398,16 +398,7 @@
   # 8. +a
 keys = scores.keys()
   vals = scores.values()
-```
-  
-
-</br>
-
-* 두 값 변경(swap)
-
-```python
-a, b = b, a
-```
+  ```
 
 </br>
 
