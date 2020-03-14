@@ -396,11 +396,11 @@
   # 결과 : ['apple', 'pear', 'banana', 'plum', 'melon']
 
   # 8. +a
-keys = scores.keys()
-  vals = scores.values()
+keys= scores.keys()
+  vals= scores.values()
   ```
 
-
+</br>
 
 </br>
 
@@ -530,9 +530,13 @@ def round_normal(n):
 * ASCII
 
 ```python
+# char to ascii
 ord('A')
-
 # 65
+
+# ascii to char
+chr(65)
+# A
 ```
 
 </br>
