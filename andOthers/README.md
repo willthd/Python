@@ -2,43 +2,41 @@
 
 * 입력 받기
 
-  ```python
-  """
-  Input
-  5
-  1 2
-  3 4
-  2 6
-  4 6
-  5 7
-  """
-  
-  # 방법 1
-  # stdin.readline()의 경우 개행문자까지 읽기 때문에 len()으로 구하면 +1됨
-  from sys import stdin
-  a = int(stdin.readline())
-  for i range(a):
-    b, c = map(int, stdin.readline().split())
-  
-    
-  # 방법 2
-  # stdin.readline() 대신 input() 활용
-  # 방법 1이 더 빠름
-  ```
+```python
+"""
+Input
+5
+1 2
+3 4
+2 6
+4 6
+5 7
+"""
 
+# 방법 1
+# stdin.readline()의 경우 개행문자까지 읽기 때문에 len()으로 구하면 +1됨
+from sys import stdin
+a = int(stdin.readline())
+for i range(a):
+  b, c = map(int, stdin.readline().split())
+
+  
+# 방법 2
+# stdin.readline() 대신 input() 활용
+# 방법 1이 더 빠름
+```
 
 </br>
 
 * 출력
 
-  ```python
-  # java에서 System.out.println()과 동일
-  print("adslkfjl")
-  
-  # java에서 System.out.print()와 동일
-  print("adslkfjl", end='')
-  ```
+```python
+# java에서 System.out.println()과 동일
+print("adslkfjl")
 
+# java에서 System.out.print()와 동일
+print("adslkfjl", end='')
+```
 
 </br>
 
@@ -46,15 +44,14 @@
 
   list의 각 element에 함수를 적용시켜 결과를 반환
 
-  ```python
-  # 각 원소의 제곱 값 출력
-  items = [1, 2, 3, 4, 5]
-  squared = list(map(lambda x: x**2, items))
-  
-  # 결과
-  # [1, 4, 9, 16, 25]
-  ```
+```python
+# 각 원소의 제곱 값 출력
+items = [1, 2, 3, 4, 5]
+squared = list(map(lambda x: x**2, items))
 
+# 결과
+# [1, 4, 9, 16, 25]
+```
 
 </br>
 
@@ -62,13 +59,14 @@
 
   list의 각 element에서 어떤 조건에 일치하는 값만 반환
 
-  ```python
-  # 리스트에서 홀수만 출력
-  is_odd = list(filter(lambda x: x%2 == 1, items))
-  
-  # 결과
-  # [1, 3, 5]
-  ```
+
+```python
+# 리스트에서 홀수만 출력
+is_odd = list(filter(lambda x: x%2 == 1, items))
+
+# 결과
+# [1, 3, 5]
+```
 
 
 </br>
@@ -77,100 +75,100 @@
 
   list의 각 element끼리 연산할 때 사용
 
-  ```python
-  # 리스트의 원소들 간의 합 출력
-  from functools import reduce
-  
-  sum = reduce((lambda x,y : x+y), [x for x in range(101)])
-  
-  # 결과
-  # 5050
-  ```
+```python
+# 리스트의 원소들 간의 합 출력
+from functools import reduce
+
+sum = reduce((lambda x,y : x+y), [x for x in range(101)])
+
+# 결과
+# 5050
+```
 
 
 </br>
 
 * sort
 
-  ```python
-  # 숫자는 오름차순, 문자는 알파벳순으로 정렬. 원본 정렬되어 변환
-  list.sort()
-  
-  # sort된 list를 return. 원본 변환 x
-  sorted(list)
-  
-  # 원소들을 거꾸로 뒤집는 것 뿐. 원본 변환
-  list.reverse()
-  
-  # 원소들은 뒤집어 return 하지만, list()로 한 번감싸야 함. 원본 변환 x
-  reversed(list)
-  list[::-1]
-  
-  # 특정 기준으로 정렬 할 때 key 사용. sorted도 마찬가지
-  list.sort(key=lambda x:x[0])
-  
-  # 두 가지 기준으로 정렬 할 때, 앞의 것이 우선 기준. sorted도 마찬가지
-  list.sort(key = lambda x: (x[0], x[1]))
-  
-  # 이 때 x[0]에 의해선 reverse로 x[1]에 의해선 정방향으로 구하고 싶다면
-  list.sort(key = lambda x: (x[0], -x[1]), reverse=True)
-  
-  # 역순으로 배열
-  list.sort(key = lambda x: x[0], reverse=True)
-  ```
+
+```python
+# 숫자는 오름차순, 문자는 알파벳순으로 정렬. 원본 정렬되어 변환
+list.sort()
+
+# sort된 list를 return. 원본 변환 x
+sorted(list)
+
+# 원소들을 거꾸로 뒤집는 것 뿐. 원본 변환
+list.reverse()
+
+# 원소들은 뒤집어 return 하지만, list()로 한 번감싸야 함. 원본 변환 x
+reversed(list)
+list[::-1]
+
+# 특정 기준으로 정렬 할 때 key 사용. sorted도 마찬가지
+list.sort(key=lambda x:x[0])
+
+# 두 가지 기준으로 정렬 할 때, 앞의 것이 우선 기준. sorted도 마찬가지
+list.sort(key = lambda x: (x[0], x[1]))
+
+# 이 때 x[0]에 의해선 reverse로 x[1]에 의해선 정방향으로 구하고 싶다면
+list.sort(key = lambda x: (x[0], -x[1]), reverse=True)
+
+# 역순으로 배열
+list.sort(key = lambda x: x[0], reverse=True)
+```
 
 </br>
 
 * Indexing, 인덱싱
 
-  ```python
-  a = "12345"
-  a[::-1]
-  
-  # 출력 결과
-  # 54321
-  ```
+```python
+a = "12345"
+a[::-1]
+
+# 출력 결과
+# 54321
+```
 
 </br>
 
 * String, 문자열
 
-  ```python
-  # 아래 경우 모두 s 원본 변경 x. return 값만 변경
-  # 대문자 
-  s.upper()
-  
-  # 소문자
-  s.lower()
-  
-  # 앞 글자만 대문자
-  s.caplitalize()
-  
-  # 거꾸로
-  s[::-1]
-  
-  # list와 string
-  char = list('hello')
-  char
-  # 출력 : ['h', 'e', 'l', 'l', 'o']
-  
-  # string to list
-  words = "python은 프로그래밍을 배우기에 아주 좋은 언어입니다."
-  words_list = words.split()
-  words_list
-  # 출력 : ['python은', '프로그래밍을', '배우기에', '아주', '좋은', '언어입니다.']
-  
-  # list to string
-  time_list = ['10', '34', '17']
-  ':'.join(time_list)
-  # 출력 : '10:34:17'
-  ```
+```python
+# 아래 경우 모두 s 원본 변경 x. return 값만 변경
+# 대문자 
+s.upper()
+
+# 소문자
+s.lower()
+
+# 앞 글자만 대문자
+s.caplitalize()
+
+# 거꾸로
+s[::-1]
+
+# list와 string
+char = list('hello')
+char
+# 출력 : ['h', 'e', 'l', 'l', 'o']
+
+# string to list
+words = "python은 프로그래밍을 배우기에 아주 좋은 언어입니다."
+words_list = words.split()
+words_list
+# 출력 : ['python은', '프로그래밍을', '배우기에', '아주', '좋은', '언어입니다.']
+
+# list to string
+time_list = ['10', '34', '17']
+':'.join(time_list)
+# 출력 : '10:34:17'
+```
 
 </br>
 
 * for문, 값과 index 함께 나타내기
 
-  
 
 ```python
   arr = [2, 7, 10]
@@ -186,103 +184,100 @@
 
 * string에서 ==와 is의 차이
 
-  
+```python
+a = "pub"
+b = ''.join(["p", "u", "b"])
 
-  ```python
-  a = "pub"
-  b = ''.join(["p", "u", "b"])
-  
-  # a == b일 경우 True. 값을 비교
-  # a is b일 경우 False. 객체 자체를 비교
-  ```
+# a == b일 경우 True. 값을 비교
+# a is b일 경우 False. 객체 자체를 비교
+```
 
  </br> 
 
 * for문, 반복문
 
-  ```python
-  for i in range(10, 7, -1):
-  	print(i)
-  	
-  # 출력 결과
-  # 10
-  # 9
-  # 8
-  
-  # for문 내에서 index 변화 불가능
-  
-  '''
-  for i in range(10):
+```python
+for i in range(10, 7, -1):
+	print(i)
+	
+# 출력 결과
+# 10
+# 9
+# 8
+
+# for문 내에서 index 변화 불가능
+
+'''
+for i in range(10):
+	if i == 3:
+		i = 8
+	print(i)
+'''
+
+i = 0
+  while i < 10:
   	if i == 3:
   		i = 8
+      i += 1
   	print(i)
-  '''
-  
-  i = 0
-    while i < 10:
-    	if i == 3:
-    		i = 8
-        i += 1
-    	print(i)
-    	i += 1	# 꼭 추가
-      
-      
-  # list 내부에서 for문 활용하기
-  modified_numbers = [0 if number % 2 == 0 else 1 if number % 3 == 0 else number for number in numbers]
-  ```
+  	i += 1	# 꼭 추가
+    
+    
+# list 내부에서 for문 활용하기
+modified_numbers = [0 if number % 2 == 0 else 1 if number % 3 == 0 else number for number in numbers]
+```
 
 
 </br>
 
 * format
 
-  ```python
-  # format
-  
-  print('Case #{}: {} + {} = {}'.format(t+1, A, B, A+B))
-  ```
+```python
+# format
+print('Case #{}: {} + {} = {}'.format(t+1, A, B, A+B))
+```
 
 </br>
 
 * List
 
-  ```python
-  # 사이즈 1000인 리스트 선언
-  a = [0] * 1000
-  
-  # 값의 index 찾기
-  a.index(값)
-  
-  # list의 경우 비어있으면 if문에서 false로 사용
-  # list.isempty()는 not list와 동일
-  if not seq:
-  if seq:
-  
-  # list 읽을 때 주의
-  # 1은 안되고, 2는 됨
-  # 1
-  a = []
-  a[0] = 1
-  print(a[0])
-  
-  # 2
-  a = []
-  a.append(1)
-  print(a[0])
-  ```
+```python
+# 사이즈 1000인 리스트 선언
+a = [0] * 1000
+
+# 값의 index 찾기
+a.index(값)
+
+# list의 경우 비어있으면 if문에서 false로 사용
+# list.isempty()는 not list와 동일
+if not seq:
+if seq:
+
+# list 읽을 때 주의
+# 1은 안되고, 2는 됨
+# 1
+a = []
+a[0] = 1
+print(a[0])
+
+# 2
+a = []
+a.append(1)
+print(a[0])
+```
 
 </br>
 
 
 * 소수점
 
-  ```python
-  # 소수점 표현 1, 소수점 4째 자리
-  "{0:0.4f}".format(y)
-  
-  # 소수점 표현 2, 3.4213
-  "%0.4f" % 3.42134234
-  ```
+```python
+# 소수점 표현 1, 소수점 4째 자리
+"{0:0.4f}".format(y)
+
+# 소수점 표현 2, 3.4213
+"%0.4f" % 3.42134234
+```
 
 
 </br>
@@ -290,58 +285,58 @@
 
 * 몫, 나머지
 
-  ```python
-  # 몫만 구하기
-  5//3
-  
-  # 나머지만 구하기
-  5%3
-  ```
+```python
+# 몫만 구하기
+5//3
+
+# 나머지만 구하기
+5%3
+```
 
 </br>
 
 * stack, queue, deque
 
-  ```python
-  # 스택
-  stack = []
-  # 마지막에 삽입
-  stack.append(1)
-  stack.append(2)
-  stack.append(3)
-  # 마지막에 pop
-  stack.pop() # 3
-  stack.pop() # 2
-  stack.pop() # 1 
-  
-  # 큐
-  queue = []
-  queue.append(1)
-  queue.append(2)
-  queue.append(3)
-  queue.pop(0) # 1
-  queue.pop(0) # 2
-  queue.pop(0) # 3
-  
-  
-  # 큐, 덱을 이용함, 큐의 경우 앞으로 한칸 씩 값을 옮겨야 하기 때문에 시간 복잡도 O(n)되기 때문
-  # (deque는 double ended queue의 약자)
-  from collections import deque
-  dq = deque()
-  # 마지막에 삽입
-  dq.append(1)
-  dq.append(2)
-  # 처음에 삽입
-  dq.appendleft(4)
-  # 마지막에 pop
-  dq.pop() # 1
-  # 처음에 pop
-  dq.popleft() # 4
-  dq.popleft() # 2
-  
-  # list를 deque로 변환
-  dq = Deque(list_)
-  ```
+```python
+# 스택
+stack = []
+# 마지막에 삽입
+stack.append(1)
+stack.append(2)
+stack.append(3)
+# 마지막에 pop
+stack.pop() # 3
+stack.pop() # 2
+stack.pop() # 1 
+
+# 큐
+queue = []
+queue.append(1)
+queue.append(2)
+queue.append(3)
+queue.pop(0) # 1
+queue.pop(0) # 2
+queue.pop(0) # 3
+
+
+# 큐, 덱을 이용함, 큐의 경우 앞으로 한칸 씩 값을 옮겨야 하기 때문에 시간 복잡도 O(n)되기 때문
+# (deque는 double ended queue의 약자)
+from collections import deque
+dq = deque()
+# 마지막에 삽입
+dq.append(1)
+dq.append(2)
+# 처음에 삽입
+dq.appendleft(4)
+# 마지막에 pop
+dq.pop() # 1
+# 처음에 pop
+dq.popleft() # 4
+dq.popleft() # 2
+
+# list를 deque로 변환
+dq = Deque(list_)
+```
 
 </br>
 
@@ -349,58 +344,56 @@
 
   Hash Table이랑 동일 개념
 
-  ```python
-  # 생성
-  dict_ = dict()
-  
-  # 1. Tuple List로부터 dict 생성
-  # key가 이름, val이 나이
-  persons = [('김기수', 30), ('홍대길', 35), ('강찬수', 25)]
-  mydict = dict(persons)
-   
-  # mydict.get('홍대길')과 동일, mydict.get('홍대성') : '홍대성' 없으면 None return함
-  age = mydict["홍대길"]
-  print(age)   # 35
-   
-  # 2. Key=Value 파라미터로부터 dict 생성
-  scores = dict(a=80, b=90, c=85)
-  print(scores['b'])  #90
-  
-  scores = {"철수": 90, "민수": 85, "영희": 80}
-  # 3. 수정
-  scores["민수"] = 88   # 수정
-  
-  # 4. 추가
-  scores["길동"] = 95   # 추가
-  
-  # 5. 삭제
-  del scores["영희"]
-  
-  # 출력 {'철수': 90, '길동': 95, '민수': 88}
-  print(scores)
-  
-  # 6. 읽기
-  v = scores["민수"]
-  
-  # 7. sort
-  # dict.sort()는 없음. 따라서 sorted만 이용
-  # 파이썬의 사전은 key : value 쌍으로 값이 들어 있으며, 이를 정렬(sort)하면 기본으로 키(key)을 기준으로 오름차순으로 정렬
-  fruits = { 'apple': 2, 'banana' : 1, 'melon' : 0, 'pear' : 2, 'plum' : 1}
-  sorted(fruits)
-  # 결과 : ['apple', 'banana', 'melon', 'pear', 'plum']
-  sorted(fruits.keys())
-  # 결과 : ['apple', 'banana', 'melon', 'pear', 'plum']
-  
-  # value 기준으로 key를 정리하고 싶으면
-  sorted(fruits, key=lambda x:fruits[x], reverse=True)
-  # 결과 : ['apple', 'pear', 'banana', 'plum', 'melon']
+```python
+# 생성
+dict_ = dict()
 
-  # 8. +a
-keys= scores.keys()
-  vals= scores.values()
-  ```
+# 1. Tuple List로부터 dict 생성
+# key가 이름, val이 나이
+persons = [('김기수', 30), ('홍대길', 35), ('강찬수', 25)]
+mydict = dict(persons)
+ 
+# mydict.get('홍대길')과 동일, mydict.get('홍대성') : '홍대성' 없으면 None return함
+age = mydict["홍대길"]
+print(age)   # 35
+ 
+# 2. Key=Value 파라미터로부터 dict 생성
+scores = dict(a=80, b=90, c=85)
+print(scores['b'])  #90
 
-</br>
+scores = {"철수": 90, "민수": 85, "영희": 80}
+# 3. 수정
+scores["민수"] = 88   # 수정
+
+# 4. 추가
+scores["길동"] = 95   # 추가
+
+# 5. 삭제
+del scores["영희"]
+
+# 출력 {'철수': 90, '길동': 95, '민수': 88}
+print(scores)
+
+# 6. 읽기
+v = scores["민수"]
+
+# 7. sort
+# dict.sort()는 없음. 따라서 sorted만 이용
+# 파이썬의 사전은 key : value 쌍으로 값이 들어 있으며, 이를 정렬(sort)하면 기본으로 키(key)을 기준으로 오름차순으로 정렬
+fruits = { 'apple': 2, 'banana' : 1, 'melon' : 0, 'pear' : 2, 'plum' : 1}
+sorted(fruits)
+# 결과 : ['apple', 'banana', 'melon', 'pear', 'plum']
+sorted(fruits.keys())
+# 결과 : ['apple', 'banana', 'melon', 'pear', 'plum']
+
+# value 기준으로 key를 정리하고 싶으면
+sorted(fruits, key=lambda x:fruits[x], reverse=True)
+# 결과 : ['apple', 'pear', 'banana', 'plum', 'melon']
+
+# 8.추가
+keys = scores.keys()
+vals = scores.values()
+```
 
 </br>
 
