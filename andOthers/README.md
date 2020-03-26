@@ -488,6 +488,9 @@ for key, value, in cnt.most_common():
 cnt.items()
 # 출력 : dict_items([('red', 2), ('blue', 3), ('green', 1)])
 
+cnt.elements()
+# 출력 : 다시 원소 형태로 ['red', 'blue', 'red', 'green', 'blue', 'blue']
+
 # counter객체는 연산 가능
 par = ['leo', 'kiki', 'eden']
 com = ['eden', 'kiki']
