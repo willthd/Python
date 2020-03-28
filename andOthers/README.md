@@ -314,12 +314,13 @@ queue = []
 queue.append(1)
 queue.append(2)
 queue.append(3)
+# 시간복잡도 O(n)
 queue.pop(0) # 1
 queue.pop(0) # 2
 queue.pop(0) # 3
 
 
-# 큐, 덱을 이용함, 큐의 경우 앞으로 한칸 씩 값을 옮겨야 하기 때문에 시간 복잡도 O(n)되기 때문
+# 큐는 보통 덱을 이용함. 큐의 경우 앞으로 한칸 씩 값을 옮겨야 하기 때문에 시간 복잡도 O(n)되기 때문
 # (deque는 double ended queue의 약자)
 from collections import deque
 dq = deque()
