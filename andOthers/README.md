@@ -120,18 +120,6 @@ list.sort(key = lambda x: x[0], reverse=True)
 
 </br>
 
-* Indexing, 인덱싱
-
-```python
-a = "12345"
-a[::-1]
-
-# 출력 결과
-# 54321
-```
-
-</br>
-
 * for문, 값과 index 함께 나타내기
 
 
@@ -143,57 +131,6 @@ a[::-1]
   # 만약 enumerate에서 두 번째 인자를 줄 경우, idx는 두 번째 값(여기선 5)부터 시작
   for idx, val in enumerate(arr, 5):
     print(idx, val)
-```
-
-</br>
-
-* string에서 ==와 is의 차이
-
-```python
-a = "pub"
-b = ''.join(["p", "u", "b"])
-
-# a == b일 경우 True. 값을 비교
-# a is b일 경우 False. 객체 자체를 비교
-```
-
-
-</br>
-
-* format
-
-```python
-# format
-print('Case #{}: {} + {} = {}'.format(t+1, A, B, A+B))
-```
-
-</br>
-
-* List
-
-```python
-# 사이즈 1000인 리스트 선언
-a = [0] * 1000
-
-# 값의 index 찾기
-a.index(값)
-
-# list의 경우 비어있으면 if문에서 false로 사용
-# list.isempty()는 not list와 동일
-if not seq:
-if seq:
-
-# list 읽을 때 주의
-# 1은 안되고, 2는 됨
-# 1
-a = []
-a[0] = 1
-print(a[0])
-
-# 2
-a = []
-a.append(1)
-print(a[0])
 ```
 
 </br>

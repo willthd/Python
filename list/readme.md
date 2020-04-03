@@ -1,7 +1,5 @@
 ## list
 
-
-
 ```python
 >>> a = [1, 2, 3, 4, 5]
 >>> a[0:2]
@@ -142,8 +140,6 @@
 [1, 2, 3, 4, 5, 6, 7]
 ```
 
-
-
 * 삭제 방법 3가지
 
   a.remove(x) - x는 a리스트의 요소값
@@ -152,8 +148,24 @@
   
   del a[x] - x는 a리스트의 인덱스
 
+</br>
 
+### 기타
 
-참고 자료
+```python
+# list의 경우 비어있으면 if문에서 false로 사용
+# list.isempty()는 not list와 동일
+if not seq:
+if seq:
+while seq:
 
-https://wikidocs.net/14 (점프 투 파이썬)
+# list 추가 시 1은 안되고, 2만 됨
+# 1
+a = []
+a[0] = 1
+
+# 2
+a = []
+a.append(1)
+```
+
