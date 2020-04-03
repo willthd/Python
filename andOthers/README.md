@@ -192,41 +192,6 @@ b = ''.join(["p", "u", "b"])
 # a is b일 경우 False. 객체 자체를 비교
 ```
 
- </br> 
-
-* for문, 반복문
-
-```python
-for i in range(10, 7, -1):
-	print(i)
-	
-# 출력 결과
-# 10
-# 9
-# 8
-
-# for문 내에서 index 변화 불가능
-
-'''
-for i in range(10):
-	if i == 3:
-		i = 8
-	print(i)
-'''
-
-i = 0
-  while i < 10:
-  	if i == 3:
-  		i = 8
-      i += 1
-  	print(i)
-  	i += 1	# 꼭 추가
-    
-    
-# list 내부에서 for문 활용하기
-modified_numbers = [0 if number % 2 == 0 else 1 if number % 3 == 0 else number for number in numbers]
-```
-
 
 </br>
 
