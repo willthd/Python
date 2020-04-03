@@ -208,63 +208,6 @@ dq = Deque(list_)
 
 </br>
 
-* Dictionary
-
-  Hash Table이랑 동일 개념
-
-```python
-# 생성
-dict_ = dict()
-
-# 1. Tuple List로부터 dict 생성
-# key가 이름, val이 나이
-persons = [('김기수', 30), ('홍대길', 35), ('강찬수', 25)]
-mydict = dict(persons)
- 
-# mydict.get('홍대길')과 동일, mydict.get('홍대성') : '홍대성' 없으면 None return함
-age = mydict["홍대길"]
-print(age)   # 35
- 
-# 2. Key=Value 파라미터로부터 dict 생성
-scores = dict(a=80, b=90, c=85)
-print(scores['b'])  #90
-
-scores = {"철수": 90, "민수": 85, "영희": 80}
-# 3. 수정
-scores["민수"] = 88   # 수정
-
-# 4. 추가
-scores["길동"] = 95   # 추가
-
-# 5. 삭제
-del scores["영희"]
-
-# 출력 {'철수': 90, '길동': 95, '민수': 88}
-print(scores)
-
-# 6. 읽기
-v = scores["민수"]
-
-# 7. sort
-# dict.sort()는 없음. 따라서 sorted만 이용
-# 파이썬의 사전은 key : value 쌍으로 값이 들어 있으며, 이를 정렬(sort)하면 기본으로 키(key)을 기준으로 오름차순으로 정렬
-fruits = { 'apple': 2, 'banana' : 1, 'melon' : 0, 'pear' : 2, 'plum' : 1}
-sorted(fruits)
-# 결과 : ['apple', 'banana', 'melon', 'pear', 'plum']
-sorted(fruits.keys())
-# 결과 : ['apple', 'banana', 'melon', 'pear', 'plum']
-
-# value 기준으로 key를 정리하고 싶으면
-sorted(fruits, key=lambda x:fruits[x], reverse=True)
-# 결과 : ['apple', 'pear', 'banana', 'plum', 'melon']
-
-# 8.추가
-keys = scores.keys()
-vals = scores.values()
-```
-
-</br>
-
 * class
 
 ```python
@@ -510,24 +453,6 @@ print(list(c))
 # 출력 결과
 # [('A', 'B'), ('A', 'C'), ('B', 'A'), ('B', 'C'), ('C', 'A'), ('C', 'B')]
 # [('A', 'B'), ('A', 'C'), ('B', 'C')]
-```
-
-</br>
-
-* set
-
-```python
-# | : 합집합, c = a|b
-# & : 교집합, c = a&b
-# - : 차집합, c = a-b
-# ^ : 대칭차집합 연산자(합집합 - 교집합), c = a^b
-# 모두 = 연산자와 함께 사용될 수 있다. =, &=, -=, ^=
-
-a = {1, 2, 3, 4, 5}
-b = {3, 4, 5, 6, 7}
-a |= b
-# a
-# {1, 2, 3, 4, 5, 6, 7}
 ```
 
 </br>
