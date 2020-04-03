@@ -132,41 +132,6 @@ a[::-1]
 
 </br>
 
-* String, 문자열
-
-```python
-# 아래 경우 모두 s 원본 변경 x. return 값만 변경
-# 대문자 
-s.upper()
-
-# 소문자
-s.lower()
-
-# 앞 글자만 대문자
-s.caplitalize()
-
-# 거꾸로
-s[::-1]
-
-# list와 string
-char = list('hello')
-char
-# 출력 : ['h', 'e', 'l', 'l', 'o']
-
-# string to list
-words = "python은 프로그래밍을 배우기에 아주 좋은 언어입니다."
-words_list = words.split()
-words_list
-# 출력 : ['python은', '프로그래밍을', '배우기에', '아주', '좋은', '언어입니다.']
-
-# list to string
-time_list = ['10', '34', '17']
-':'.join(time_list)
-# 출력 : '10:34:17'
-```
-
-</br>
-
 * for문, 값과 index 함께 나타내기
 
 

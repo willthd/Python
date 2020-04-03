@@ -1,45 +1,20 @@
 ## 문자열
 
-```python
-print("=" * 50)
-print("My Program")
-print("=" * 50)
-```
-
-- output
-
-```
-================================================== 
-My Program
-==================================================
-```
-
-
-
 ### slicing
 
 ```python
 a = "Life is too short, You need Python"
 print(a[3])
+# e
 print(a[-2])
-# 1부터 3전까지(0 <= a < 3)
+# o
 print(a[1:3])
+# if
 print(a[:6])
-b = a[0] + a[1] + a[2] + a[3]
-print(b)
+# Life i
 ```
 
-- output
-
-```
-e
-o
-if
-Life i
-Life
-```
-
-
+</br>
 
 ### formatting
 
@@ -47,55 +22,43 @@ Life
 number = 10
 day = "three"
 print("I ate %d apples. so I was sick for %s days." % (number, day))
+
+# 출력
+# I ate 10 apples. so I was sick for three days.
 ```
 
-- output
+</br>
 
-```
-I ate 10 apples. so I was sick for three days.
-```
+### 기타
 
+```python
+# 아래 경우 모두 s 원본 변경 x. return 값만 변경
+# 대문자 
+s.upper()
 
+# 소문자
+s.lower()
 
-| 코드 | 설명                      |
-| ---- | ------------------------- |
-| %s   | 문자열 (String)           |
-| %c   | 문자 1개(character)       |
-| %d   | 정수 (Integer)            |
-| %f   | 부동소수 (floating-point) |
-| %o   | 8진수                     |
-| %x   | 16진수                    |
-| %%   | Literal % (문자 `%` 자체) |
+# 앞 글자만 대문자
+s.caplitalize()
 
-여기서 재미있는 것은 %s 포맷 코드인데, 이 코드는 어떤 형태의 값이든 변환해 넣을 수 있다. 무슨 말인지 예를 통해 확인해 보자
+# 거꾸로
+s[::-1]
 
-```
->>> "I have %s apples" % 3
-'I have 3 apples'
->>> "rate is %s" % 3.234
-'rate is 3.234'
-```
+# list와 string
+char = list('hello')
+char
+# 출력 : ['h', 'e', 'l', 'l', 'o']
 
-3을 문자열 안에 삽입하려면 %d를 사용하고, 3.234를 삽입하려면 %f를 사용해야 한다. 하지만 %s를 사용하면 이런 것을 생각하지 않아도 된다. 왜냐하면 %s는 자동으로 % 뒤에 있는 값을 문자열로 바꾸기 때문이다
+# string to list
+words = "python은 프로그래밍을 배우기에 아주 좋은 언어입니다."
+words_list = words.split()
+words_list
+# 출력 : ['python은', '프로그래밍을', '배우기에', '아주', '좋은', '언어입니다.']
 
-
-
-**숫자 바로 대입하기**
-
-```
->>> "I eat {0} apples".format(3)
-'I eat 3 apples'
+# list to string
+time_list = ['10', '34', '17']
+':'.join(time_list)
+# 출력 : '10:34:17'
 ```
 
-**문자열 바로 대입하기**
-
-```
->>> "I eat {0} apples".format("five")
-'I eat five apples'
-```
-
-
-
-참고 자료
-
-https://wikidocs.net/13 (점프 투 파이썬)
