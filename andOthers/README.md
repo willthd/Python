@@ -440,7 +440,7 @@ def solution(numbers):
 * 순열과 조합
 
 ```python
-from itertools import permutations, combinations
+from itertools import permutations, combinations, produdct
 
 chars = ['A', 'B', 'C']
 
@@ -448,11 +448,16 @@ chars = ['A', 'B', 'C']
 p = permutations(chars, 2)  # 순열
 c = combinations(chars, 2)  # 조합
 
+# items = [['a', 'b', 'c'], [1, 2]]
+product_ = product(*items)
+
 print(list(p))
 print(list(c))
+print(list(product_))
 # 출력 결과
 # [('A', 'B'), ('A', 'C'), ('B', 'A'), ('B', 'C'), ('C', 'A'), ('C', 'B')]
 # [('A', 'B'), ('A', 'C'), ('B', 'C')]
+# [('a', 1), ['a', 2], ['b', 1], ['b', 2], ['c', 1], ['c', 2]]
 ```
 
 </br>
