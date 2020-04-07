@@ -493,7 +493,7 @@ print(heap)
 # 삭제 안하고 값 얻기
 print(heap[0])
 
-# 기존 리스트 힙으로 변환
+# 기존 리스트 힙으로 변환. O(NlogN)
 heap = [4, 1, 7, 3, 8, 5]
 heapq.heapify(heap)
 print(heap)
