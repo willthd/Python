@@ -493,7 +493,7 @@ print(heap)
 # 삭제 안하고 값 얻기
 print(heap[0])
 
-# 기존 리스트 힙으로 변환. O(NlogN)
+# 기존 리스트 힙으로 변환. O(Nlog)
 heap = [4, 1, 7, 3, 8, 5]
 heapq.heapify(heap)
 print(heap)
@@ -528,5 +528,12 @@ for i, j in zip(a, b):
 # 1, 1
 # 2, 2
 # 3, 3
+```
+
+</br>
+
+```python
+# 절대값
+abs(-2234)
 ```
 
