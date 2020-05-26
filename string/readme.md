@@ -74,3 +74,15 @@ b = ''.join(["p", "u", "b"])
 # a is b일 경우 False. 객체 자체를 비교
 ```
 
+</br>
+
+### f-string
+
+```python
+x = 10
+y = 3
+print(f'x + y = {x+y} | x * y = {x*y}')
+# 'x + y = 13 | x * y = 30'
+```
+
+</br>
