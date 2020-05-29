@@ -537,3 +537,14 @@ for i, j in zip(a, b):
 abs(-2234)
 ```
 
+</br>
+
+* terminal 명령어로 parameter 값 지정
+
+```python
+# python test.py 1 2 3
+import sys
+print(sys.argv)
+# ['test.py', '1', '2', '3']
+```
+
