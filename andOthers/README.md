@@ -546,5 +546,6 @@ abs(-2234)
 import sys
 print(sys.argv)
 # ['test.py', '1', '2', '3']
+# sys.argv[0]에는 1이 저장되어 있음
 ```
 
