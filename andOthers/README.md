@@ -549,3 +549,12 @@ print(sys.argv)
 # sys.argv[0]에는 1이 저장되어 있음
 ```
 
+</br>
+
+* 객체 제거
+
+```python
+del song_gnr_map_unnest
+```
+
+</br>
