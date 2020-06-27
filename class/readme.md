@@ -36,5 +36,6 @@ print(flight._num)
 print(flight.__num)
 ```
 
+</br>
 
-
+참조 : https://wikidocs.net/16071
