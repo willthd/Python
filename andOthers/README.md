@@ -627,3 +627,27 @@ Annotation 만들어보기
 ```
 
 </br>
+
+* assert
+
+assert는 뒤의 조건이 True가 아니면 AssertError를 발생한다.
+
+```python
+lists = [1, 3, 6, 3.14, 2, 3, 7]
+
+def test(t):
+    assert type(t) is int, '정수 아닌 값이 있네'
+    print(t)
+
+for i in lists:
+    test(i)
+
+"""
+1
+3
+6
+AssertionError: 정수 아닌 값이 있네
+"""
+```
+
+</br>
