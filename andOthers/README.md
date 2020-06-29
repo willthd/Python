@@ -277,6 +277,7 @@ print(type(t2))
 * 최빈값 구하기
 
 ```python
+# 시간 복잡도 : O(n)
 from collections import Counter
 
 colors = ['red', 'blue', 'red', 'green', 'blue', 'blue']
@@ -291,6 +292,7 @@ cnt.values()
 # 출력 : dict_values([2, 3, 1])
 
 cnt.most_common()
+# 시간 복잡도 : O(nlogn)
 # 출력 : (('blue', 3), ('red', 2), ('green', 1))
 # 따라서 아래 가능
 for key, value, in cnt.most_common():
