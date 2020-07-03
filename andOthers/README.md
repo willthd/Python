@@ -653,3 +653,10 @@ AssertionError: 정수 아닌 값이 있네
 ```
 
 </br>
+
+* math.pow()
+
+return type은 float. 주의
+
+</br>
+
