@@ -442,23 +442,26 @@ def solution(numbers):
 * 순열과 조합
 
 ```python
-from itertools import permutations, combinations, produdct
+from itertools import permutations, combinations, produdct, combinations_with_replacement
 
 chars = ['A', 'B', 'C']
 
 # 두 번째 파라미터는 nP2, nC2에서 2를 의미
 p = permutations(chars, 2)  # 순열
 c = combinations(chars, 2)  # 조합
+cr = combinations_with_replacement(chars, 2) # 중복조합
 
 # items = [['a', 'b', 'c'], [1, 2]]
 product_ = product(*items)
 
 print(list(p))
 print(list(c))
+print(list(cr))
 print(list(product_))
 # 출력 결과
 # [('A', 'B'), ('A', 'C'), ('B', 'A'), ('B', 'C'), ('C', 'A'), ('C', 'B')]
 # [('A', 'B'), ('A', 'C'), ('B', 'C')]
+# [('A', 'A'), ('A', 'B'), ('A', 'C'), ('B', 'B'), ('B', 'C'), ('C', 'C')]
 # [('a', 1), ['a', 2], ['b', 1], ['b', 2], ['c', 1], ['c', 2]]
 ```
 
