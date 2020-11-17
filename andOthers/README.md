@@ -661,5 +661,24 @@ AssertionError: 정수 아닌 값이 있네
 
 return type은 float. 주의
 
+* with
+
+  try...finally 문을 매번 쓰지 않아도 동일 효과 보장. 더 이상 필요치 않은 리소스를 정리하거나 해체하는 일을 잊을 수 없게 되므로 버그나 메모리 누수를 피할 수 있음.
+
+  ```python
+  with open('hello.txt', 'w') as f:
+    f.write('hello, world!')
+    
+    
+  # 위의 with문은 아래와 동일
+  f = open('hello.txt', 'w')
+  try:
+    f.write('hello, world!')
+  finally:
+    f.close()
+  ```
+
+  
+
 </br>
 
