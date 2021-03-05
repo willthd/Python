@@ -635,7 +635,7 @@ Annotation 만들어보기
 
 * assert
 
-assert는 뒤의 조건이 True가 아니면 AssertError를 발생한다.
+assert는 뒤의 조건이 False면 AssertError를 발생한다.
 
 ```python
 lists = [1, 3, 6, 3.14, 2, 3, 7]
@@ -702,3 +702,4 @@ return type은 float. 주의
   ```
 
   
+
