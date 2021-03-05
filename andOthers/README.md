@@ -678,7 +678,27 @@ return type은 float. 주의
     f.close()
   ```
 
-  
 
 </br>
 
+* getattr(object, object의 속성)
+
+  ```python
+  class sample:
+    def __init__(self, x):
+      self.x = x
+      
+  c = sample(1)
+  c.x 
+  # 출력 1
+  
+  getattr(c, x)
+  # 출력 1
+  
+  # dataframe의 index는 날짜(2021-01-01 03:04:05)
+  dt = df.index.to_series().dt
+  feature_names = ['year', 'month']
+  {name: getattr(dt, name) for name in feature_names}
+  ```
+
+  
