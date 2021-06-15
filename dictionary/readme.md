@@ -73,5 +73,15 @@ a = {'name':'pey', 'phone':'0119993323', 'birth': '1118'}
 print('name' in a)
 # True
 # 이 때, dict는 set을 backing하고 있기 때문에 시간 복잡도 O(1). list의 경우는 O(n)
+
+# list를 key로 지정
+genre_count = dict.fromkeys(total_genres)
+
+# defaultdict
+from collections import defaultdict
+word2id = defaultdict(lambda : 0, a=3)
+# key값 없을 때 0 return
+word2id['a'] # 3
+word2id['c'] # 0
 ```
 
