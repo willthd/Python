@@ -79,7 +79,7 @@ is_odd = list(filter(lambda x: x%2 == 1, items))
 # 리스트의 원소들 간의 합 출력
 from functools import reduce
 
-sum = reduce((lambda x,y : x+y), [x for x in range(101)])
+sum = reduce(lambda x,y : x+y, [x for x in range(101)])
 
 # 결과
 # 5050
