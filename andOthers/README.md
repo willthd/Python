@@ -719,5 +719,16 @@ return type은 float. 주의
   {name: getattr(dt, name) for name in feature_names}
   ```
 
+  </br>
   
-
+  * 최대공약수, 최소공배수
+  
+    ```python
+    import math
+    # 최대공약수
+    a = math.gcd(3, 6)
+    # 최소공배수
+    b = math.lcm(3, 6)
+    ```
+  
+    
