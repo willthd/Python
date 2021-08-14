@@ -204,6 +204,24 @@ dq.popleft() # 2
 
 # list를 deque로 변환
 dq = Deque(list_)
+
+# heap 시간복잡도 : O(logn)
+import heapq # 최소 힙
+a = [1, 5, 7, 9, 3, 10, ]
+# a가 변함
+heapq.heapify(a)
+# pop하면 가장 작은 값
+small = heapq.heappop(a)
+heapq.heappush(a, small)
+# 최대힙 구현
+nums = [4, 1, 7, 3, 8, 5]
+heap = []
+
+for num in nums:
+  heapq.heappush(heap, (-num, num))  # (우선 순위, 값)
+
+while heap:
+  print(heapq.heappop(heap)[1])  # index 1
 ```
 
 </br>
