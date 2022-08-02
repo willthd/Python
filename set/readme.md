@@ -103,3 +103,6 @@ print(set_)
 ```
 
 
+
+* if in set*, len(set*), set_.remove(e) 모두 time complexity O(1)
+  따라서 list를 대신할 수 있는 경우 set이나 set을 backing하고 있는 dict활용
